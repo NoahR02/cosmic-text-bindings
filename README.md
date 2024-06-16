@@ -1,12 +1,21 @@
+# cosmic-text-cpp (WIP)
+
+## Build Instructions
+### Build the system library
 ```shell
 cargo build
 ```
 
-```shell
-cbindgen --config cbindgen.toml --crate cosmic-text-c --output cosmic-text.h
-```
-
+### Move the system library to the lib folder
 ```shell
 mv target/debug/cosmic_text_c.lib lib/cosmic_text_c.lib
-mv cosmic-text.h include/cosmic-text.h
 ```
+
+### Generate the C++ header
+
+```shell
+cbindgen --config cbindgen.toml --crate cosmic-text-c --output include/cosmic-text.hpp
+```
+
+## User Instructions
+Look in the examples folder for how to use this in your C++ project.

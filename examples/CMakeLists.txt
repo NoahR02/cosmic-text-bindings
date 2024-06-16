@@ -16,7 +16,7 @@ FetchContent_MakeAvailable(raylib)
 file(GLOB_RECURSE PROJECT_SOURCES CONFIGURE_DEPENDS "${CMAKE_CURRENT_LIST_DIR}/sources/*.c")
 set(PROJECT_INCLUDE "${CMAKE_CURRENT_LIST_DIR}/sources/")
 add_executable(simple)
-target_sources(simple PRIVATE ${PROJECT_SOURCES} simple.c)
+target_sources(simple PRIVATE ${PROJECT_SOURCES} simple.cpp)
 target_include_directories(simple PRIVATE ${PROJECT_INCLUDE})
 
 target_link_libraries(simple PUBLIC cosmic-text raylib)

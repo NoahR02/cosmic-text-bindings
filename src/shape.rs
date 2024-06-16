@@ -9,11 +9,11 @@ pub enum Shaping {
     /// and the font you are displaying in your application.
     // #[cfg(feature = "swash")]
     // For now we will include this, but we should find a way to enable or disable this.
-    ShapingBasic,
+    Basic,
     /// Advanced text shaping and font fallback.
     ///
     /// You will need to enable this strategy if the text contains a complex
     /// script, the font used needs it, and/or multiple fonts in your system
     /// may be needed to display all of the glyphs.
-    ShapingAdvanced,
+    Advanced,
 }

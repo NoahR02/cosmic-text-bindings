@@ -8,3 +8,4 @@ crate-type = ["staticlib"]
 
 [dependencies]
 cosmic-text = {rev = "8bb45d7aca5b4a109924f3162d670297b6bd4a19", git = "https://github.com/pop-os/cosmic-text"}
+bitflags = "2.5.0"

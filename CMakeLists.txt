@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.15)
 
-project(cosmic-text VERSION 1.0 LANGUAGES C)
+project(cosmic-text VERSION 1.0 LANGUAGES C CXX)
 
 add_library(cosmic-text STATIC IMPORTED)
 set_target_properties(${PROJECT_NAME} PROPERTIES

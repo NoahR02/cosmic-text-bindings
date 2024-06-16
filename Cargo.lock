@@ -54,6 +54,7 @@ dependencies = [
 name = "cosmic-text-c"
 version = "0.1.0"
 dependencies = [
+ "bitflags",
  "cosmic-text",
 ]
 
