@@ -1,5 +1,7 @@
 # cosmic-text-cpp (WIP)
 
+![images/intro.png](images/intro.png)
+
 ## Build Instructions
 ### Build the system library
 ```shell
