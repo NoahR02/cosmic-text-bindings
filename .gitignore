@@ -1,0 +1,9 @@
+/target
+/cmake-build-debug
+
+# Editors
+.idea
+.vs
+.vscode
+
+/lib/cosmic_text_c.lib
