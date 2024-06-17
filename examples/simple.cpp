@@ -6,12 +6,8 @@ constexpr int SCREEN_HEIGHT = 450;
 constexpr int WINDOW_PADDING = 20;
 
 void draw_fn(int32_t x, int32_t y, uint32_t w, uint32_t h, cosmic_text::Color color) {
-    const Color rayib_color = {
-        cosmic_text::color_r(color),
-        cosmic_text::color_g(color),
-        cosmic_text::color_b(color),
-        cosmic_text::color_a(color)
-    };
+    const auto color_rgba = cosmic_text::color_as_rgba(color);
+    const Color rayib_color = {color_rgba.r, color_rgba.g, color_rgba.b, color_rgba.a};
 
     DrawRectangle(x + WINDOW_PADDING, y + WINDOW_PADDING, static_cast<int>(w), static_cast<int>(h), rayib_color);
 }

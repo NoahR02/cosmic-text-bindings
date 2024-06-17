@@ -225,6 +225,13 @@ struct Metrics {
     float line_height;
 };
 
+struct ColorRGBA {
+    uint8_t r;
+    uint8_t g;
+    uint8_t b;
+    uint8_t a;
+};
+
 
 extern "C" {
 
@@ -250,13 +257,15 @@ void buffer_set_text(Buffer *buffer,
 
 void buffer_shape_until_scroll(Buffer *buffer, FontSystem *font_system, bool prune);
 
-uint8_t color_a(Color color);
+uint8_t color_a(Color self);
 
-uint8_t color_b(Color color);
+ColorRGBA color_as_rgba(Color self);
 
-uint8_t color_g(Color color);
+uint8_t color_b(Color self);
 
-uint8_t color_r(Color color);
+uint8_t color_g(Color self);
+
+uint8_t color_r(Color self);
 
 Color color_rgba(uint8_t r, uint8_t g, uint8_t b, uint8_t a);
 

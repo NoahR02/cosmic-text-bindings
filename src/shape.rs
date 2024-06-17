@@ -17,3 +17,12 @@ pub enum Shaping {
     /// may be needed to display all of the glyphs.
     Advanced,
 }
+
+impl Shaping {
+    pub(crate) fn convert_c_shaping(shaping: Shaping) -> cosmic_text::Shaping {
+        match shaping {
+            Shaping::Basic => cosmic_text::Shaping::Basic,
+            Shaping::Advanced => cosmic_text::Shaping::Advanced
+        }
+    }
+}
