@@ -1,4 +1,4 @@
-language = "C++"
+language = "C"
 
 ############## Options for Wrapping the Contents of the Header #################
 

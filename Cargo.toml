@@ -7,5 +7,5 @@ edition = "2021"
 crate-type = ["staticlib"]
 
 [dependencies]
-cosmic-text = {rev = "8bb45d7aca5b4a109924f3162d670297b6bd4a19", git = "https://github.com/pop-os/cosmic-text"}
+cosmic-text = {rev = "a03ec6b75f0ea8fd6264d6cd05afcec3c2213f8f", git = "https://github.com/pop-os/cosmic-text", features = ["no_std"]}
 bitflags = "2.5.0"

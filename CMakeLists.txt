@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.15)
 
-project(cosmic-text VERSION 1.0 LANGUAGES CXX)
+project(cosmic-text VERSION 1.0 LANGUAGES C CXX)
 
 add_library(cosmic-text STATIC include/cosmic-text.hpp include/cosmic-text.cpp)
 

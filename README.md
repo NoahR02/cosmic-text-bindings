@@ -13,10 +13,16 @@ cargo build
 mv target/debug/cosmic_text_c.lib lib/cosmic_text_c.lib
 ```
 
-### Generate the C++ header
+### Generate the header
 
+C++
 ```shell
-cbindgen --config cbindgen.toml --crate cosmic-text-c --output include/cosmic-text.hpp
+cbindgen --config cppbindgen.toml --crate cosmic-text-c --output include/cosmic-text.hpp
+```
+
+C
+```shell
+cbindgen --config cbindgen.toml --crate cosmic-text-c --output include/cosmic-text.h
 ```
 
 ## User Instructions
