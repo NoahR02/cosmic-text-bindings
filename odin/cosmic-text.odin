@@ -110,7 +110,8 @@ foreign cosmic_text {
         font_system: ^FontSystem,
         swash_cache: ^SwashCache,
         color: Color,
-        draw_fn: proc (i32, i32, u32, u32, Color)
+        void_ptr: rawptr,
+        draw_fn: proc "cdecl" (rawptr, i32, i32, u32, u32, Color)
     ) ---
 
     buffer_set_size :: proc(buffer: ^Buffer, font_system: ^FontSystem, width: f32, height: f32) ---

@@ -245,7 +245,8 @@ void buffer_draw(Buffer *buffer,
                  FontSystem *font_system,
                  SwashCache *swash_cache,
                  Color color,
-                 void (*draw_fn)(int32_t, int32_t, uint32_t, uint32_t, Color));
+                 void *void_ptr,
+                 void (*draw_fn)(void*, int32_t, int32_t, uint32_t, uint32_t, Color));
 
 void buffer_set_size(Buffer *buffer, FontSystem *font_system, float width, float height);
 

@@ -5,7 +5,7 @@ constexpr int SCREEN_WIDTH = 900;
 constexpr int SCREEN_HEIGHT = 450;
 constexpr int WINDOW_PADDING = 20;
 
-void draw_fn(int32_t x, int32_t y, uint32_t w, uint32_t h, cosmic_text::Color color) {
+void draw_fn(void* user_data, int32_t x, int32_t y, uint32_t w, uint32_t h, cosmic_text::Color color) {
     const auto color_rgba = cosmic_text::color_as_rgba(color);
     const Color rayib_color = {color_rgba.r, color_rgba.g, color_rgba.b, color_rgba.a};
 
@@ -37,7 +37,7 @@ int main() {
         BeginDrawing();
 
         ClearBackground(WHITE);
-        cosmic_text::buffer_draw(buffer, font_system, swash_cache, text_color, draw_fn);
+        cosmic_text::buffer_draw(buffer, font_system, swash_cache, text_color, nullptr, draw_fn);
         EndDrawing();
     }
 

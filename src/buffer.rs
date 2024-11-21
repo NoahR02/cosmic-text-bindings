@@ -55,11 +55,16 @@ impl Buffer {
     }
 
     #[no_mangle]
-    pub extern "C" fn buffer_draw(buffer: &mut cosmic_text::Buffer, font_system: &mut cosmic_text::FontSystem, swash_cache: &mut cosmic_text::SwashCache, color: Color, draw_fn: extern fn(i32, i32, u32, u32, Color)) {
+    pub extern "C" fn buffer_draw(buffer: &mut cosmic_text::Buffer,
+                                  font_system: &mut cosmic_text::FontSystem,
+                                  swash_cache: &mut cosmic_text::SwashCache,
+                                  color: Color,
+                                  void_ptr: *mut core::ffi::c_void,
+                                  draw_fn: extern fn(*mut core::ffi::c_void, i32, i32, u32, u32, Color)) {
         let lib_color = cosmic_text::Color(color.0);
         buffer.draw(font_system, swash_cache, lib_color, |x, y, w, h, color| {
             let c_color = Color(color.0);
-            draw_fn(x, y, w, h, c_color);
+            draw_fn(void_ptr, x, y, w, h, c_color);
         });
     }
 }
